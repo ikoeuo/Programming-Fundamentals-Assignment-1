@@ -9,7 +9,7 @@ print('\nWhat path will you choose to follow today?')
 while True:
 #loop to make player choose their role
 
-    roleasn = (input('\nWill you be the “Brave Dashing Knight” or the “Powerful Wizard”? '))
+    roleasn = (input('\nWill you be the “Brave Dashing Knight” or the “Powerful Wizard”? (Knight/Wizard)'))
 
     if (roleasn==('Knight')) or (roleasn==('knight')):
         print('Oh I see you choosen the Knight wise choice!')
@@ -52,6 +52,31 @@ while True:
 print('\nFor your first quest you must run through the dark forest but there lies an evil witch, beware for if you are caught there is no turning back')
 while True:    
 
+    question2 = (input(f'\nSo {name} would you like to roll your dice? \n*You can role 2 dice, each one with 10 sides 1-10*'))
+
+    if (question == ('Yes')) or (question == ('yes')):
+        break
+
+    else:
+        print(f'\nYou must roll the dice to continue{name}')
+
+App.darkForest()
+
+#challenge two
+while True:    
+
+    question = (input(f'\n{name} Your next quest will be more challenging are you ready for the challenge? '))
+
+    if (question == ('Yes')) or (question == ('yes')):
+        break
+
+    else:
+        print(f'You must say yes to continue {name}')
+
+    
+print('\nFor this quest you must make your way through the treasures dungeon you must be quick and ovoid all the traps')
+while True:    
+
     question2 = (input(f'\nSo {name} would you like to roll your dice? '))
 
     if (question == ('Yes')) or (question == ('yes')):
@@ -60,5 +85,35 @@ while True:
     else:
         print(f'\nYou must roll the dice to continue{name}')
 
+App.dungeonTrap()
 
-App.darkForest()
+#challenge three
+while True:    
+
+    question = (input(f'Your are strong indeed {name} no one else has made it this far, are you ready for your last quest? '))
+
+    if (question == ('Yes')) or (question == ('yes')):
+        break
+
+    else:
+        print(f'\nYou must say yes to continue {name}')
+
+    
+print('\nFor this quest your strength and defence will be crucial \nFor this quest you will have to slay the dragon protecting The Lost Treasure')
+while True:    
+
+    question2 = (input(f'\nSo {name} would you like to take on this challenge and roll your dice? '))
+
+    if (question == ('Yes')) or (question == ('yes')):
+        break
+    elif (question == ('give up')):
+        print(f'It was a good try {name} better luck next time.')
+        exit()
+    else:
+        print(f'\nYou must roll the dice to continue or give up {name}')
+
+App.dragonFight()
+    
+
+
+
