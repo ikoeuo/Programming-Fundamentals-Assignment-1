@@ -3,7 +3,6 @@ import KnightRole
 import WizardRole
 
 
-
 def role():
     while True:
 
@@ -38,6 +37,27 @@ def role():
     print('\nIn total there are 3 quests to reach The Lost Treasure and they all depend on your luck')
 
 def darkForest():
+
+    while True:    
+
+        question = (input(f'\nSo {name} are you ready for your first quest? (yes/no) '))
+
+        if (question == ('Yes')) or (question == ('yes')):
+            break
+
+        else:
+            print(f'You must say yes to continue')
+
+    while True:    
+
+        question = (input('\nSo would you like to roll your dice? (yes/no) \n\n*You can role 2 dice, each one with 10 sides 1-10* '))
+
+        if (question == ('Yes')) or (question == ('yes')):
+            break
+
+        else:
+            print(f'\nYou must roll the dice to continue')
+
     d1 = random.randint(1, 10)
     d2 = random.randint(1, 10)
  
@@ -69,8 +89,29 @@ def darkForest():
             print('\nGAME OVER')
             exit()
 
-
 def dungeonTrap():
+    while True:    
+
+        question = (input('\n Your next quest will be more challenging are you ready for the challenge? '))
+
+        if (question == ('Yes')) or (question == ('yes')):
+            break
+
+        else:
+            print('You must say yes to continue')
+
+    
+    print('\nFor this quest you must make your way through the treasures dungeon you must be quick and avoid all the traps')
+    while True:    
+
+        question = (input('\nSo would you like to roll your dice? '))
+
+        if (question == ('Yes')) or (question == ('yes')):
+            break
+
+        else:
+            print('\nYou must roll the dice to continue')
+
     d1 = random.randint(1, 10)
     d2 = random.randint(1, 10)
  
@@ -102,10 +143,32 @@ def dungeonTrap():
             print('\nGAME OVER')
             exit()
 
-
 def dragonFight():
-    d1 = random.randint(1, 10)
-    d2 = random.randint(1, 10)
+    while True:    
+
+        question = (input('Your\'e are strong indeed no one else has made it this far, are you ready for your last quest? '))
+
+        if (question == ('Yes')) or (question == ('yes')):
+            break
+
+        else:
+            print(f'\nYou must say yes to continue')
+
+    
+    print('\nFor this quest your strength and defence will be crucial \nFor this quest you will have to slay the dragon protecting The Lost Treasure')
+    while True:    
+
+        question = (input(f'\nSo would you like to take on this challenge and roll your dice? (yes/give up) '))
+
+        if (question == ('Yes')) or (question == ('yes')):
+            break
+        elif (question == ('give up')):
+            print('It was a good try better luck next time.')
+            exit()
+        else:
+            print(f'\nYou must roll the dice to continue or give up')
+        d1 = random.randint(1, 10)
+        d2 = random.randint(1, 10)
  
     if (roleasn==('Knight')) or (roleasn==('knight')):
 
@@ -117,7 +180,7 @@ def dragonFight():
 
         else:
             print(f'\nYour dice landed on {d1} and {d2}')
-            print(f'\nYou were not strong enough to defeat the dragon and with these injuries there is going back, better luck next time {super.name}')
+            print(f'\nYou were not strong enough to defeat the dragon and with these injuries there is going back, better luck next time {name}')
             print('\nGAME OVER')
             exit()
             
