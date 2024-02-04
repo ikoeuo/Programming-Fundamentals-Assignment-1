@@ -1,7 +1,7 @@
 #Dnd text game
-import random
 import KnightRole
 import WizardRole
+import App
 
 print('Hello fellow traveler, welcome To your quest to find The Lost Treasure!')
 print('\nWhat path will you choose to follow today?')
@@ -36,3 +36,29 @@ print(f'\n{name} what a fine name indeed traveler!')
 print('\nNow that all formalities are out of the way it is time for your first quest')
 print('\nIn total there are 3 quests to reach The Lost Treasure and they all depend on your luck')
 
+
+while True:    
+
+    question = (input(f'\nSo {name} are you ready for your first quest? '))
+
+    if (question == ('Yes')) or (question == ('yes')):
+        break
+
+    else:
+        print(f'You must say yes to continue {name}')
+
+
+#challenge one   
+print('\nFor your first quest you must run through the dark forest but there lies an evil witch, beware for if you are caught there is no turning back')
+while True:    
+
+    question2 = (input(f'\nSo {name} would you like to roll your dice? '))
+
+    if (question == ('Yes')) or (question == ('yes')):
+        break
+
+    else:
+        print(f'\nYou must roll the dice to continue{name}')
+
+
+App.darkForest()
