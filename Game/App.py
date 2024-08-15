@@ -194,7 +194,7 @@ def dragonFight():
 
         else:
             print(f'\nYour dice landed on {d1} and {d2}')
-            print(f'\nEven with your great power one hit from the dragon toom you out due to your low defence, better luck next time {name}')
+            print(f'\nEven with your great power one hit from the dragon took you out due to your low defence, better luck next time {name}')
             print('\nGAME OVER')
             exit()
                        
